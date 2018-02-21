@@ -1,0 +1,25 @@
+{
+  "name": "iiko-card5",
+  "version": "0.0.1",
+  "description": "api iiko card 5",
+  "main": "iiko-card5.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pub42/iiko-card5.git"
+  },
+  "keywords": [
+    "iikocard5",
+    "nodejs",
+    "iiko",
+    "npm"
+  ],
+  "author": "42team",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pub42/iiko-card5/issues"
+  },
+  "homepage": "https://github.com/pub42/iiko-card5#readme"
+}
