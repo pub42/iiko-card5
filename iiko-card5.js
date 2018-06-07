@@ -12,7 +12,7 @@ var config
 const request = require('iiko-request');
     
     
-var method = {
+var methods = {
 getCustomerByPhone: {
 		type: 'GET',
 		path: '/api/0/customers/get_customer_by_phone',
@@ -31,21 +31,22 @@ exports.init = function(_config) {
 };
 
 exports.api = function(method, data) {
-	return new Promise((resolve, reject) => {
+	return new Promise(function(resolve, reject) {
 
 		// TODO: vlidation data for separate methods 
 		
-		if (method[method].params.hasOwnProperty('organization')) {
+		if (methods[method].params.hasOwnProperty('organization')) {
 			data.organization = config.organization;
 		}
 		
-		request.exec(method[method], data).then(
+		request.call(methods[method], data).then(
 		  result => {
+		      console.log(result)
 					resolve(result);
 		  },
 		  error => {
 		      reject(error);
 		  }
 		)
-  }
+  });
 };
